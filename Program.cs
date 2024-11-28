@@ -65,7 +65,7 @@
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write("ausgewählt");
                 }
-                if (npcWahl == 2)
+                else if (npcWahl == 2)
                 {
                     Console.Write("\nDer NPC hat ");
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -73,7 +73,7 @@
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write("ausgewählt");
                 }
-                if (npcWahl == 3)
+                else
                 {
                     Console.Write("\nDer NPC hat ");
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -122,7 +122,7 @@
             //Dem User wird dann ausgegeben, welches Zeichen der Computer gewählt hat und ob man gewonnen, verloren oder ein Unentschieden hat.
             //Danach kann sich der User entscheiden eine weitere Runde zu spielen, oder nicht.
 
-            /*
+            /* Lange Form (Korrektur)
             string input;
             Random rnd = new Random();
             int computer;
@@ -207,6 +207,7 @@
             while (continueGame);
             */
 
+            /* Kurze Form (Korrektur)
             Random rand = new Random();
             string comOut;
             while (true)
@@ -235,6 +236,8 @@
                 else
                 {
                     Console.WriteLine("Eingabe ist ungültig");
+                    Console.ReadKey();
+                    continue;
                 }
 
                 Console.WriteLine("Möchtest du noch eine Runde spielen? ");
@@ -242,8 +245,7 @@
 
                 if ("j" != Console.ReadLine().ToLower().Trim()) break;
             }
-
-
+            */
         }
     }
 }
